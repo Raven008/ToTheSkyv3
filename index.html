@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<title>To The Sky !</title>
+		<link rel="stylesheet" href="css/gridpak.css" type="text/css" title="Design" media="screen"/>
+		<link rel="stylesheet" href="css/common.css" type="text/css" title="Design" media="screen"/>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/png" href="imagesd/icon.png" />
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+		<script type="text/javascript" src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"> </script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"> </script>
+		<script type="text/javascript" src="js/main.js"> </script>
+	</head>
+	<body>
+		<header class="row">
+			<div class="col span_3">
+				<img src="imagesc/logo.png" alt="To the Sky !" id="logo"/>
+			</div>
+			<div class="col span_3">
+				<button type="button" style="background:none; cursor:pointer; border:none;">
+					<img src="imagesc/menu.png" alt="MENU" id="menu"/>
+				</button>
+				<span>menu</span>
+			</div>
+		</header>
+		
+		<nav>
+			<ul>
+				<li class="col span_6 li_border li_top"><a href="#">HELLO</a></li>
+				<li class="col span_6 li_border"><a href="#skills">COMPETENCE</a></li>
+				<li class="col span_6 li_bot"><a href="#galery">GALERIE</a></li>
+			</ul>
+		</nav>
+		
+		<section class="row">
+			<h1>HELLO</h1>
+			<div>
+				<div class="col homeDiv">
+					<div id="corporate1" class="corporate"> </div>
+					<div id="CV">
+						<img src="imagesc/fleche.png" alt="Flèche"/>
+						<span>Awesome CV</span>
+						<a href="./CV_Adrien_Boucinha.pdf" target="_blank">
+							<img src="imagesc/cv.png" alt="CV">
+						</a>
+					</div>
+				</div>
+				<div class="col homeDiv"> 
+					<p>Bienvenue sur mon portfolio, je m'appelle Adrien Boucinha, fraîchement diplômé d'un Master PSM (Produits et Services Multimédia).<br><br>
+						Le Master PSM fournit un large éventail de compétences pour pouvoir accompagner un projet web ou autre projet multimédia tout au long de son développement.<br><br>
+						Sur ce site, vous pourrez trouver : quelques travaux que j'ai réalisé durant mes 5 dernières années d'étude ainsi que le détail de mes compétences.
+					</p>
+					<div id="corporate3" class="corporate"> </div>
+				</div>
+				<div class="col homeDiv">
+					<div id="corporate2" class="corporate"> </div>
+					<div id="contact">
+						<span> adrien.boucinha[at]gmail.com</span>
+						<span>Contact me !</span>
+						<img src="imagesc/fleche.png" alt="Flèche"/>
+						<!--<a href="mailto:adrien.boucinha@gmail.com"> adrien.boucinha[at]gmail.com</a>-->
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div id="progressbar"></div>
+		<script>
+			$( "#progressbar" ).progressbar({
+			value: 37
+			});
+		</script>
+		
+		<footer class="row">
+		</footer>
+	</body>
+</html>
