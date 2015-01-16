@@ -1,5 +1,5 @@
 $(document).ready(initialiser);
-$( window ).resize(redimensionner);
+$(window).resize(redimensionner);
 
 
 var menu = false;
@@ -7,23 +7,10 @@ var CV = false;
 var hauteur1 = 0;
 
 function initialiser(){
-	$("body").append('<div id="cache"><span>0%</span></div>');
-	$("body").ready(function() {
-		console.log('chargé');
-	});
-	$( "body" ).progressbar({
-		change: function( event, ui ) {
-			console.log(event);
-		}
-	});
+	$("body").append('<div id="cache1"></div>');
+	$("body").append('<div id="cache2"></div>');
+	$("body").append('<div id="cache3"><span>0%</span></div>');
 	
-	$( "body" ).progressbar({
-		complete: function( event, ui ) {
-			console.log(event);
-		}
-	});
-
-	$("#cache").click(cacher);
 	$("header button").click(ascenceur);
 	$("nav a").click(chargement);
 	$("nav a").mouseover(survolMenu);
@@ -36,10 +23,29 @@ function initialiser(){
 	});
 	hauteur1 = $(".homeDiv:eq(1)").height();
 	$(".homeDiv:eq(0)").height(hauteur1);
+	
+	afficher();
 }
 
-function cacher(e){
-	$(this).hide();
+function cacher(){
+	$("#cache1").animate({"height":"50%"}, 600, "easeOutQuad");
+	$("#cache2").animate({
+		"top":"50%",
+		"height":"50%"
+	}, 600, "easeOutQuad", function(){
+		window.location.href = "./html/galerie.html";
+	});
+}
+
+function afficher(){
+	$("#cache3").animate({"width":"100%"}, 2000, function() {
+		$("#cache3").fadeOut(200);
+		$("#cache1").animate({"height":"0%"}, 700, "easeOutQuad");
+		$("#cache2").animate({
+			"top":"100%",
+			"height":"0%"
+		}, 700, "easeOutQuad");
+	});
 }
 
 function redimensionner(e){
@@ -65,10 +71,11 @@ function chargement(e){
 	var current = $("section > h1").text();
 	if(target == current){
 		$("section").show();
-			$("nav").stop(true, true).animate({"top":"-100%"}, 500);
+		$("nav").stop(true, true).animate({"top":"-100%"}, 500);
 		menu = false;
 	}else{
 		console.log(target, current);
+		cacher();
 	}
 }
 
