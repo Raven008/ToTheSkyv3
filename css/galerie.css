@@ -1,0 +1,56 @@
+section > div{
+	width:96.5%;
+	margin-left:1.5%;
+}
+
+section{
+	margin-bottom:80px;
+}
+
+.mini{
+	float:left;
+	margin-left:1.5%;
+	margin-right:1.5%;
+	margin-bottom:3%;
+	display:inline;
+	position:relative;
+	border:1px solid white;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+
+.mini>div{
+	background-size:cover;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+
+.mini a{
+	height:100%;
+	width:100%;
+	position:absolute;
+	background:rgba(180, 110, 60, 0.93);
+	top:0;
+	left:0;
+	outline:none;
+	text-align:center;
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+	letter-spacing:1pt;
+	padding-top:30%;
+	opacity:0;
+	transition:opacity 0.6s;
+	-moz-transition:opacity 0.6s;
+	-webkit-transition:opacity 0.6s;
+}
+
+.mini a:hover{
+	opacity:1;
+	transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	-webkit-transition:opacity 0.3s;
+}

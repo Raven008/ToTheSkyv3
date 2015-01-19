@@ -97,6 +97,10 @@
 			/*width:48%;*/
 			display:none;
 		}
+		
+		.mini{
+			width:47%;
+		}
 
     }
 
@@ -164,6 +168,11 @@
 		.corporate{
 			max-width:23%;
 			width:400px;
+		}
+		
+		.mini{
+			width:22%;
+			max-width:350px;
 		}
 	}
 	
